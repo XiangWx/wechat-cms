@@ -1,0 +1,42 @@
+<!--pages/listInfo/listInfo.wxml-->
+<swiper class='listInfoSwipe'>
+  <swiper-item wx:for="{{listInfoItem.images}}" wx:key="id">
+    <image src='{{item}}'/>
+  </swiper-item>
+
+</swiper>
+
+ <view class='listInfo' >
+   <text class='name'>姓名:{{listInfoItem.name}}</text>
+   <text class='phone'>电话:{{listInfoItem.phone}}</text>
+   <text class='address'>地址:{{listInfoItem.address}}</text>
+   <text class='ctime'>营业时间:{{listInfoItem.businessHours}}</text>
+  </view>
+
+  <view>
+   <text>{{shop.introduction}}</text>
+  </view>
+
+  
+<view class="comments" wx:if="{{listInfoItem.comments.length}}">
+  <view class="item" wx:for="{{listInfoItem.comments}}" wx:key="*this">
+    <text class="name">{{item.name}}</text>
+    <text class="date">{{item.date}}</text>
+    <text class="rating">{{item.rating}}</text>
+    <text class="content">{{item.content}}</text>
+    <view class="images">
+      <image wx:for="{{item.images}}" wx:key="*this" src="{{utils.size(item)}}"/>
+    </view>
+  </view>
+</view>
+
+<!-- //定义页面内部的js脚本，不支持es6,爬虫下来的数据接口要传入w h 就是宽和高，但是由于没有办法直接通过过滤器渲染数据，这里使用内部wxs编写脚本 -->
+<wxs module='utils'>
+  module.exports = {
+   size:function(input){
+   return input.replace('w.h','100.100')
+  }
+  }
+</wxs>
+
+  

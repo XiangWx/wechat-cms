@@ -1,0 +1,17 @@
+<view class="section">
+  <input placeholder="搜索" auto-focus />
+  <icon type="search" size='35rpx'></icon>
+</view>
+<navigator url='/pages/listInfo/listInfo?id={{item.id}}' class='listBox' wx:for="{{shops}}" wx:key="id">
+  <image src='{{item.images[0]}}'/>
+  <view class='listInfo'>
+   <text class='name'>姓名:{{item.name}}</text>
+   <text class='phone'>电话:{{item.phone}}</text>
+   <text class='address'>地址:{{item.address}}</text>
+   <text class='ctime'>营业时间:{{item.businessHours}}</text>
+  </view>
+</navigator>
+
+<view wx:if='{{hasMore}}' class='loadmore loading'>加载更多。。。</view>
+<view wx:else class='loadmore'>已经没有更多数据了。。。</view>
+

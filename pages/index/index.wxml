@@ -1,0 +1,17 @@
+<!--pages/index/index.wxml-->
+<swiper class='swipeBox'>
+  <swiper-item mode="aspectFill">
+    <image src='/assets/images/banner-01.png' />
+  </swiper-item>
+  <swiper-item mode="aspectFill">
+    <image src='/assets/images/banner-02.png' />
+  </swiper-item>
+</swiper>
+<!-- 九宫格 -->
+<view class='grids'>
+  
+
+</view>
+
+
+

@@ -1,0 +1,62 @@
+/* pages/list/list.wxss */
+.section input{
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  padding: 10rpx 15rpx;
+  margin: 10rpx 30rpx;
+}
+.section icon{
+  position: absolute;
+  top: 30rpx;
+  right: 45rpx;
+
+}
+
+.listBox{
+  display: flex;
+}
+.listBox image{
+  width:130rpx;
+  min-width:130px;
+  height:160rpx;
+  margin: 10rpx;
+}
+.listBox  .listInfo{
+  display: flex;
+  flex-direction: column;
+  /* margin: 15rpx 0; */
+  padding: 5rpx;
+}
+.listBox .listInfo .name{
+  font-size:30rpx;
+}
+.listBox .listInfo .phone,
+.listBox .listInfo .address,
+.listBox .listInfo .ctime{
+  font-size:24rpx;
+  color:#234
+}
+.loadmore{
+  color:#888;
+  text-align: center;
+  font-size: 30rpx;
+}
+/* .loadmore.loading::before{
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  color: red;
+  border: 1px solid #ccc;
+   margin-top: -10rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(-360deg)
+  }
+} */
